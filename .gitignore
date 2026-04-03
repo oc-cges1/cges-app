@@ -1,0 +1,41 @@
+# Dependencias
+node_modules/
+**/node_modules/
+
+# Build
+dist/
+build/
+
+# Variables de entorno — NUNCA al repositorio
+.env
+.env.local
+.env.production
+.env*.local
+backend/.env
+
+# Logs
+*.log
+logs/
+
+# Backups
+backups/
+
+# Docker
+.docker/
+
+# SSL
+ssl/
+*.pem
+*.key
+*.crt
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# Prisma
+backend/prisma/migrations/*.sql

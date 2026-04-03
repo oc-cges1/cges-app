@@ -1,0 +1,93 @@
+{
+    "type": "FeatureCollection",
+    "name": "Zonas de Influencia - Valle del Cauca",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "EPSG:4326"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "id": 1,
+            "properties": {
+                "departamento": "Valle del Cauca",
+                "foco": "BAJO CALIMA",
+                "zona": "RURAL",
+                "organizacion": "Estado Mayor Central - EMC",
+                "catalogado": "GAO",
+                "grupo": "Bloque Occidental Jacobo Arenas",
+                "frente": "Frente Jaime Martínez",
+                "comision": "Columna Móvil Ricardo Velásquez",
+                "jurisdiccion": "Buenaventura, Dagua, Calima Darién, Río Frío"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [-77.10, 3.85],
+                        [-76.95, 3.90],
+                        [-76.85, 3.75],
+                        [-77.00, 3.70],
+                        [-77.10, 3.85]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 2,
+            "properties": {
+                "departamento": "Valle del Cauca",
+                "foco": "NAYA",
+                "zona": "RURAL",
+                "organizacion": "ELN",
+                "catalogado": "GAO",
+                "grupo": "Frente de Guerra Occidental Omar Gómez",
+                "frente": "Compañía Omar Silgado",
+                "comision": null,
+                "jurisdiccion": "Buenaventura (Yurumanguí, Cajambre)"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [-77.30, 3.60],
+                        [-77.10, 3.65],
+                        [-77.00, 3.50],
+                        [-77.20, 3.45],
+                        [-77.30, 3.60]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "id": 3,
+            "properties": {
+                "departamento": "Valle del Cauca",
+                "foco": "CORDILLERA CENTRAL",
+                "zona": "RURAL",
+                "organizacion": "AGC - Clan del Golfo",
+                "catalogado": "GAO",
+                "grupo": "Bloque Jairo de Jesús Durango",
+                "frente": "Frente Valle Jefferson Madera",
+                "comision": null,
+                "jurisdiccion": "Riofrío, Trujillo, Bolívar, Roldanillo"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [-76.50, 4.00],
+                        [-76.30, 4.05],
+                        [-76.20, 3.90],
+                        [-76.40, 3.85],
+                        [-76.50, 4.00]
+                    ]
+                ]
+            }
+        }
+    ]
+}

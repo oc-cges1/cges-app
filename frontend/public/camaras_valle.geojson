@@ -1,0 +1,2607 @@
+{
+  "type": "FeatureCollection",
+  "name": "Camaras_Valle_del_Cauca",
+  "features": [
+
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "CARTAGO",
+    "zona": 2,
+    "municipio": "Alcala",
+    "direccion": "P1. Calle 5 y 6 Entre Carreras 7 y 8.",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-75.781698, 4.675054]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "CARTAGO",
+    "zona": 2,
+    "municipio": "Alcala",
+    "direccion": "P2. Calle 3 Carrera 13",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-75.785623, 4.67401]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "CARTAGO",
+    "zona": 2,
+    "municipio": "Alcala",
+    "direccion": "P3. Calle 6 Carrera 5",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-75.778388, 4.674608]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "CARTAGO",
+    "zona": 2,
+    "municipio": "Argelia",
+    "direccion": "P1.Calle 3 Carrera 6",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.121257, 4.726757]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "CARTAGO",
+    "zona": 2,
+    "municipio": "Argelia",
+    "direccion": "P2.Calle 4 Carrera 4",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.120789, 4.727872]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Buga",
+    "direccion": "P1. Calle 30 Con Carrera 15 A 15B",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.29637, 3.918559] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Buga",
+    "direccion": "P2. Calle 1 sur Cr 14",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.304007, 3.89391] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Buga",
+    "direccion": "P3. Calle 8a sur Cr 9",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.297496, 3.88976] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Buga",
+    "direccion": "P4. Calle 20 Cr 8",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.291907, 3.908915] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Buga",
+    "direccion": "P5. Calle 22a Cr 15a",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.297906, 3.913593] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Buga",
+    "direccion": "P6. Calle 3 sur con Carrera 15",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.30502, 3.891495] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Buga",
+    "direccion": "P7. Calle 4 Cra 16",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.304237, 3.897857] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Buga",
+    "direccion": "P8. Calle 12 Cra 14",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.299962, 3.904443] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Buga",
+    "direccion": "P9. Calle 24 con Carrera 10",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.292969, 3.912333] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Buga",
+    "direccion": "P10. Calle 9 Cr 13",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.299977, 3.901672] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Buga",
+    "direccion": "P11. Calle 22 con Cr 10",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.293441, 3.911169] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Buga",
+    "direccion": "P12. Calle 25 Cra 11",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.294319, 3.913475] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Buga",
+    "direccion": "Calle 8 # 20 - 432 INTERNA Y EXTERNA INSTALACIONES CGES",
+    "camaras_valle": 0,
+    "camaras_municipio": 1,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.309756, 3.904191] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "SEVILLA",
+    "zona": 6,
+    "municipio": "Caicedonia",
+    "direccion": "P1. Calle 12 entre Carreras 14 y 15",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-75.829142, 4.334523]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "SEVILLA",
+    "zona": 6,
+    "municipio": "Caicedonia",
+    "direccion": "P2. Calle 12 entre Carrera 9 y 10",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-75.825395, 4.335353]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "SEVILLA",
+    "zona": 6,
+    "municipio": "Caicedonia",
+    "direccion": "P3. Carrera 14 vía Sevilla Sector Transito",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-75.829463, 4.339886]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "SEVILLA",
+    "zona": 6,
+    "municipio": "Caicedonia",
+    "direccion": "P4. Carera 16 Calle 8 Esquina",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-75.829426, 4.331273]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "SEVILLA",
+    "zona": 6,
+    "municipio": "Caicedonia",
+    "direccion": "P5. Calle 12 entre Carrera 9 y 10",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-75.825395, 4.335353]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "SEVILLA",
+    "zona": 6,
+    "municipio": "Caicedonia",
+    "direccion": "P6. Calle 12 entre Carreras 14 y 15",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-75.829142, 4.334523]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Calima",
+    "direccion": "P1. Carrera 7 Calle 11 Parque Principal",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.484167, 3.932222]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Calima",
+    "direccion": "P2. Calle 10 Con 6 Estación de Policía",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.483957, 3.931291]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Calima",
+    "direccion": "P3. Cancha de la Esperanza Manzana C",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.492778, 3.933056]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Calima",
+    "direccion": "P4. Calle 9 con Carrera 7 Galería",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.484963, 3.931059]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Calima",
+    "direccion": "P5. Carrera 7 con 24 Entrada a la Ciudadela",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.478419, 3.938677]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Calima",
+    "direccion": "P6. Carrera 7 con 24 Entrada a la Ciudadela P5.",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.478419, 3.938677]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Calima",
+    "direccion": "P7. Calle 9 con Carrera 7 Galería P4.",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.484963, 3.931059]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Calima",
+    "direccion": "P8. Calle 10 Con 6 Estación de Policía P2.",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.483957, 3.931291]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "MECAL",
+    "zona": 8,
+    "municipio": "Candelaria",
+    "direccion": "P1. ENTRADA URBANIZACION EL PIDU",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.352103, 3.382772]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "MECAL",
+    "zona": 8,
+    "municipio": "Candelaria",
+    "direccion": "P2. ENTRADA AL PUEBLITO VIEJO",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.352926, 3.385598]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "MECAL",
+    "zona": 8,
+    "municipio": "Candelaria",
+    "direccion": "P3. SECTOR GUACA RIO FRAYLE",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.367222, 3.393889]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "MECAL",
+    "zona": 8,
+    "municipio": "Candelaria",
+    "direccion": "P4. CALLEJON GUAILI",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.351043, 3.411046]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "MECAL",
+    "zona": 8,
+    "municipio": "Candelaria",
+    "direccion": "P5. PUENTE PARRAGA",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.342945, 3.407155]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "MECAL",
+    "zona": 8,
+    "municipio": "Candelaria",
+    "direccion": "P6. CR9 CL5 COLEGUIO GERMAN NIETO",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.349861, 3.406288]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "CARTAGO",
+    "zona": 2,
+    "municipio": "El Cairo",
+    "direccion": "P1. Carrera 5 con Calle 9 Esquina",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.220766, 4.762681]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "CARTAGO",
+    "zona": 2,
+    "municipio": "El Cairo",
+    "direccion": "P2.Calle 6 Carrera 3 Esquina",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.223789, 4.756604]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "ROLDANILLLO",
+    "zona": 7,
+    "municipio": "El Dovio",
+    "direccion": "P1. Cra 7 con Calle 6 Esquina",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.23783, 4.512051]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "ROLDANILLLO",
+    "zona": 7,
+    "municipio": "El Dovio",
+    "direccion": "P2. Cra 8 con Calle 9",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [-76.23689, 4.510561]
+  }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "PALMIRA",
+    "zona": 1,
+    "municipio": "Florida",
+    "direccion": "P1. Calle 6 Con Cra 17",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.235423, 3.321739] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "PALMIRA",
+    "zona": 1,
+    "municipio": "Florida",
+    "direccion": "P2. Calle 8 con Cra 19",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.236336, 3.324082] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "PALMIRA",
+    "zona": 1,
+    "municipio": "Florida",
+    "direccion": "P3. Carrera 18 con variante",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.237978, 3.320834] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "PALMIRA",
+    "zona": 1,
+    "municipio": "Florida",
+    "direccion": "P4. Cra 14 con Calle 13a",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.231839, 3.321767] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "PALMIRA",
+    "zona": 1,
+    "municipio": "Florida",
+    "direccion": "P5. Calle 11 con Cra 2b",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.224308, 3.319477] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "PALMIRA",
+    "zona": 1,
+    "municipio": "Florida",
+    "direccion": "P6. Calle 11 con Cra 24",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.239399, 3.328708] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "PALMIRA",
+    "zona": 1,
+    "municipio": "Florida",
+    "direccion": "P7. Calle 9 con Cra 16",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.233551, 3.323568] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "PALMIRA",
+    "zona": 1,
+    "municipio": "Florida",
+    "direccion": "P8. Entrada Barios Miranda y Florida",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.248102, 3.331515] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "PALMIRA",
+    "zona": 1,
+    "municipio": "Florida",
+    "direccion": "P9. Calle 8 con Cra 19 P2",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.236336, 3.324082] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "PALMIRA",
+    "zona": 1,
+    "municipio": "Florida",
+    "direccion": "P10. Calle 11 con Cra 24 P6.",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.239399, 3.328708] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "PALMIRA",
+    "zona": 1,
+    "municipio": "Florida",
+    "direccion": "P11. Cra 14 con Calle 13a P4.",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.231839, 3.321767] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "PALMIRA",
+    "zona": 1,
+    "municipio": "Florida",
+    "direccion": "P12.Calle 9 con Cra 16 P7.",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.233551, 3.323568] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Ginebra",
+    "direccion": "P1. Cra 1 Norte Entrada Pichichi",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.26596, 3.727177] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Ginebra",
+    "direccion": "P2. Cra 2 Calle 6",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.268091, 3.725047] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Ginebra",
+    "direccion": "P3. Carrera 1n con Calle 15 B/ Promesa",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.262517, 3.728454] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Ginebra",
+    "direccion": "P4. Cra 6 Calle 5",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.267941, 3.722188] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Ginebra",
+    "direccion": "P5. Cra 3 Calle 12",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.264066, 3.725783] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Ginebra",
+    "direccion": "P6. Cra 2 Calle 6 P2.",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.268091, 3.725047] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Ginebra",
+    "direccion": "P7. Cra 3 Calle 12 P5.",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.264066, 3.725783] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Ginebra",
+    "direccion": "P8. Cra 6 Calle 5",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.267941, 3.722188] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Guacari",
+    "direccion": "P1. Broche de Oro",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.326162, 3.759445] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Guacari",
+    "direccion": "P2. Cementerio",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.332893, 3.757951] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Guacari",
+    "direccion": "P3. Porvenir Entrada Carrera 12 con Calle 2",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.337753, 3.762113] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Guacari",
+    "direccion": "P4. Alcaldía",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.333956, 3.76331] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Guacari",
+    "direccion": "P5. Américas",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.327384, 3.761216] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Guacari",
+    "direccion": "P6. Alcaldía P4",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.333956, 3.76331] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Guacari",
+    "direccion": "P7. Broche de oro P1",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.326162, 3.759445] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Guacari",
+    "direccion": "P8. Porvenir Entrada Carrera 12 con Calle 2 P3.",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.337797, 3.762132] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "MECAL",
+    "zona": 8,
+    "municipio": "Jamundi",
+    "direccion": "P1. CR50A SUR CL10A URBANIZACION BONANZA",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.513436, 3.228453] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "MECAL",
+    "zona": 8,
+    "municipio": "Jamundi",
+    "direccion": "P2. CR15 CL17 PARQUE DE LA PRADERA",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.540053, 3.268478] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "MECAL",
+    "zona": 8,
+    "municipio": "Jamundi",
+    "direccion": "P3. URBANIZACION EL RODEO",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.520605, 3.245239] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "MECAL",
+    "zona": 8,
+    "municipio": "Jamundi",
+    "direccion": "P4. ENTRADA A BONANZA VIA PANAMERICANA",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.508913, 3.229576] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "MECAL",
+    "zona": 8,
+    "municipio": "Jamundi",
+    "direccion": "P5. CR2 CL6 PORTAL DEL JORDAN",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.542201, 3.25471] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "MECAL",
+    "zona": 8,
+    "municipio": "La Cumbre",
+    "direccion": "P1. CL4 CR8",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.57, 3.650833] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "MECAL",
+    "zona": 8,
+    "municipio": "La Cumbre",
+    "direccion": "P2.CR12 CL2 OBREROS CRISTO",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.57267, 3.647515] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "MECAL",
+    "zona": 8,
+    "municipio": "La Cumbre",
+    "direccion": "P3. CR1 CL 2 ESTACION TREN",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.56621, 3.648215] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "CARTAGO",
+    "zona": 7,
+    "municipio": "La Victoria",
+    "direccion": "P1. Calle 9 Cra 9",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.037821, 4.523955] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "CARTAGO",
+    "zona": 7,
+    "municipio": "La Victoria",
+    "direccion": "P2. Calle 12 Cra 11",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.039921, 4.526201] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "CARTAGO",
+    "zona": 2,
+    "municipio": "Obando",
+    "direccion": "P1. Carrera 6 Calle 6 Barrio el Llano",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-75.975386, 4.578587] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "CARTAGO",
+    "zona": 2,
+    "municipio": "Obando",
+    "direccion": "P2. Calle 3 Carrera 4 Esquina Barrio Centro",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-75.97511, 4.574064] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "CARTAGO",
+    "zona": 2,
+    "municipio": "Obando",
+    "direccion": "P3. Calle 3 Cra 1",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-75.971939, 4.575183] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Restrepo",
+    "direccion": "P1. Cra 10 con CLL 13Barrio el Centro",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.522499, 3.82237] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Restrepo",
+    "direccion": "P2. Cafeoccidente, Cll 9 con Cra 10 y 11, poste 39110",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.523438, 3.8207] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "Restrepo",
+    "direccion": "P3. Cra 10 Calle 8",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.52639, 3.818742] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "ROLDANILLLO",
+    "zona": 7,
+    "municipio": "Roldanillo",
+    "direccion": "P1. Cra 8 calle 7 Parque Principal",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.154583, 4.410314] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "ROLDANILLLO",
+    "zona": 7,
+    "municipio": "Roldanillo",
+    "direccion": "P2. Cra 9 nro. 6-57 Bar Tico-Tico",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.156149, 4.409745] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "ROLDANILLLO",
+    "zona": 7,
+    "municipio": "Roldanillo",
+    "direccion": "P3. Calle9 Cr2b",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.152152, 4.4149] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "ROLDANILLLO",
+    "zona": 7,
+    "municipio": "Roldanillo",
+    "direccion": "P4. Cra 3 Calle 8 Zona Rosa",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.152836, 4.414537] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "ROLDANILLLO",
+    "zona": 7,
+    "municipio": "Roldanillo",
+    "direccion": "P5. Calle 5 Carrera 6",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.156523, 4.411793] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "ROLDANILLLO",
+    "zona": 7,
+    "municipio": "Roldanillo",
+    "direccion": "P6. Cra 9 nro. 6-57 Bar Tico-Tico",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.152152, 4.4149] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "ROLDANILLLO",
+    "zona": 7,
+    "municipio": "Roldanillo",
+    "direccion": "P7. Calle9 Cr2b",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.152836, 4.414537] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "ROLDANILLLO",
+    "zona": 7,
+    "municipio": "Roldanillo",
+    "direccion": "P8. Cra 3 Calle 8 Zona Rosa",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.156523, 4.411793] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "TULUÁ",
+    "zona": 5,
+    "municipio": "Rio Frio",
+    "direccion": "P1. Calle 5 con Carrera 10 Parque Principal Bomberos",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.288209, 4.155604] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "TULUÁ",
+    "zona": 5,
+    "municipio": "Rio Frio",
+    "direccion": "P2. Frente Guarapera, glorieta",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "NO"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.280357, 4.148418] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "SEVILLA",
+    "zona": 6,
+    "municipio": "Sevilla",
+    "direccion": "P1. Calle 82 Cra 52A",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-75.934444, 4.290556] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "SEVILLA",
+    "zona": 6,
+    "municipio": "Sevilla",
+    "direccion": "P2. Barrio Ciracusa Carrera 47 Calle 57 Esquina",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-75.931111, 4.266944] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "SEVILLA",
+    "zona": 6,
+    "municipio": "Sevilla",
+    "direccion": "P3. Cra 47 Cll47",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-75.931667, 4.261389] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "SEVILLA",
+    "zona": 6,
+    "municipio": "Sevilla",
+    "direccion": "P4. Barrio Brasil Calle 62 con Carrera 45 Esquina",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-75.928611, 4.273333] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "SEVILLA",
+    "zona": 6,
+    "municipio": "Sevilla",
+    "direccion": "P5. Barrio Municipal Calle 47 con Carrera 51 Esquina",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-75.928729, 4.273368] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "SEVILLA",
+    "zona": 6,
+    "municipio": "Sevilla",
+    "direccion": "P6. Barrio Ciracusa Carrera 47 Calle 57 Esquina",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-75.935, 4.260833] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "SEVILLA",
+    "zona": 6,
+    "municipio": "Sevilla",
+    "direccion": "P7. Barrio Brasil Calle 62 con Carrera 45 Esquina",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-75.928611, 4.273333] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "San Pedro",
+    "direccion": "P1. Calle 4 con Carrera 5 Barrio Centro",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.227644, 3.995937] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "San Pedro",
+    "direccion": "P2. Calle 3 con Carrera 6 Barrio Centro",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.229579, 3.994432] }
+},
+{
+  "type": "Feature",
+  "properties": {
+    "pais": "Colombia",
+    "departamento": "Valle del Cauca",
+    "distrito": "BUGA",
+    "zona": 4,
+    "municipio": "San Pedro",
+    "direccion": "P3. Calle 3 con Carrera 8 Cancha Zeus",
+    "camaras_valle": 1,
+    "camaras_municipio": 0,
+    "total_camaras": 1,
+    "visualizacion": "CGES"
+  },
+  "geometry": { "type": "Point", "coordinates": [-76.231394, 3.995143] }
+},
+{
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "ROLDANILLLO",
+        "zona": 7,
+        "municipio": "Toro",
+        "direccion": "P1. Carrera 3 con Calle 8 Sector Galería",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.07261, 4.606709]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "ROLDANILLLO",
+        "zona": 7,
+        "municipio": "Toro",
+        "direccion": "P2 Esquina Alcaldía Carrera 3 Calle 11",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.082748, 4.608631]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P1. Calle 25 con Cra 20",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.201344, 4.087107]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P2. Puente de las Mariposas Salida Sur",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "NO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.202199, 4.054413]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P3. Cra 28 con Calle 21 (Puente de las brujas)",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.195566, 4.084797]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P4. Calle 12Bis con Cra 27",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.197094963747, 4.09729608414359]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P5. Puente entrada al Picacho",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "NO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.177961, 4.07059]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P6. Urbanización san francisco (jardín infantil)",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "NO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.198542, 4.107819]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P7. B/ la Santa Cruz (Puesto de Salud) Cr 49 Cll 14",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.172116, 4.090021]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P8. Callejón 7 Vueltas (Corregimiento Aguaclara)",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "NO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.192841, 4.102939]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P9. B/ Guayacanes (Cr 2 con Cll 19 7 Canchas)",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.212724, 4.097753]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P10. B/ la Trinidad Cr 27 con Cll 19",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.19504, 4.091796]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P11. B/ San Antonio Cr 28a Cll 14",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.193812, 4.09547]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P12. B/ Victoria Cr 33 Cll 27",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "NO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.191896, 4.083388]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P13. Puente de la Champeta Cr 30 Cll 38",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "NO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.194984, 4.073595]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P14. Cra 28 con Calle 21 (Puente de las brujas) P3",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.195566, 4.084797]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P15. P10. B/ la Trinidad Cr 27 con Cll 19",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.19504, 4.091796]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P16. P1. Calle 25 con Cra 20",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.201344, 4.087107]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P17. P11. B/ San Antonio Cr 28a Cll 14",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.193812, 4.09547]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P18. Urbanización san francisco (jardín infantil)",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "NO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.198542, 4.107819]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P19. B/ la Santa Cruz (Puesto de Salud) Cr 49 Cll 14",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "NO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.172116, 4.090021]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P20. Callejón 7 Vueltas (Corregimiento Aguaclara)",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "NO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.192841, 4.102939]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P21. B/ Guayacanes (Cr 2 con Cll 19 7 Canchas)",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "NO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.212724, 4.097753]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P22. Puente de las Mariposas Salida Sur",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "NO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.202199, 4.054413]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "TULUÁ",
+        "zona": 5,
+        "municipio": "Tulua",
+        "direccion": "P23. P10. B/ la Trinidad Cr 27 con Cll 19",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.19504, 4.091796]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "CARTAGO",
+        "zona": 2,
+        "municipio": "Ulloa",
+        "direccion": "P1. Cra 2 Calle 5 Parque Principal",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "NO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.737428, 4.703579]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "CARTAGO",
+        "zona": 2,
+        "municipio": "Ulloa",
+        "direccion": "P2. Calle 6 Cr 3 Sector Comercio",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "NO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.736897, 4.702297]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "ROLDANILLLO",
+        "zona": 7,
+        "municipio": "Versalles",
+        "direccion": "P1. Carrera 7 con 8 Parque Principal",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "NO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.199898, 4.57436]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "ROLDANILLLO",
+        "zona": 7,
+        "municipio": "Versalles",
+        "direccion": "P2. Cra 8 con Calle 6 (Cra 8 con Calle 3)",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.199221, 4.570931]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "BUGA",
+        "zona": 4,
+        "municipio": "Yotoco",
+        "direccion": "P1. Cra 4 calle 6",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.385662, 3.860814]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "BUGA",
+        "zona": 4,
+        "municipio": "Yotoco",
+        "direccion": "P2. Carrera 5 con Calle 1 frente a las Canchas Múltiples",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.382798, 3.865496]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "BUGA",
+        "zona": 4,
+        "municipio": "Yotoco",
+        "direccion": "P3. Calle 2 4w B/ La Inmaculada",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.390272, 3.866976]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "MECAL",
+        "zona": 8,
+        "municipio": "Yumbo",
+        "direccion": "P1. CR2 CL1N",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CAD YUMBO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.499517, 3.5876]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "MECAL",
+        "zona": 8,
+        "municipio": "Yumbo",
+        "direccion": "P2. CR1N CL16 MATADERO",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CAD YUMBO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.484153, 3.586355]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "MECAL",
+        "zona": 8,
+        "municipio": "Yumbo",
+        "direccion": "P3. CR14 CL23",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CAD YUMBO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.478679, 3.572131]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "MECAL",
+        "zona": 8,
+        "municipio": "Yumbo",
+        "direccion": "P4. DAPA MALL",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CAD YUMBO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.517385, 3.519145]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "MECAL",
+        "zona": 8,
+        "municipio": "Yumbo",
+        "direccion": "P5. MENGA DISCOTECAS",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CAD YUMBO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.52078, 3.500377]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "ROLDANILLLO",
+        "zona": 7,
+        "municipio": "Zarzal",
+        "direccion": "P1. Carrera 13 con calle 10",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.073546, 4.396578]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "ROLDANILLLO",
+        "zona": 7,
+        "municipio": "Zarzal",
+        "direccion": "P2. Cra 10 con Calle 11",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.071063, 4.395843]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "ROLDANILLLO",
+        "zona": 7,
+        "municipio": "Zarzal",
+        "direccion": "P3. Carrera 10 con Calle 18",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.066894, 4.400901]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "ROLDANILLLO",
+        "zona": 7,
+        "municipio": "Zarzal",
+        "direccion": "P4. Carrera 5 entre Calles 9 y 10",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.067715, 4.391919]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "ROLDANILLLO",
+        "zona": 7,
+        "municipio": "Zarzal",
+        "direccion": "P5. Carrera 13 con Calle 14",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "CGES"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.071568, 4.400166]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "pais": "Colombia",
+        "departamento": "Valle del Cauca",
+        "distrito": "ROLDANILLLO",
+        "zona": 7,
+        "municipio": "Zarzal",
+        "direccion": "P6. Carrera 10 con Calle 9",
+        "camaras_valle": 1,
+        "camaras_municipio": 0,
+        "total_camaras": 1,
+        "visualizacion": "NO"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.072219, 4.394236]
+      }
+    }
+  ]
+}

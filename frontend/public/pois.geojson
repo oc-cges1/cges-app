@@ -1,0 +1,129 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "name": "Puntos de Interés - Cali",
+    "updated_at": "2026-02-02",
+    "source": "Sistema de Información Local Cali",
+    "version": "1.0",
+    "crs": {
+      "type": "name",
+      "properties": {
+        "name": "EPSG:4326"
+      }
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "id": "poi-001",
+      "properties": {
+        "name": "Centro de Salud San Juan",
+        "category": "salud",
+        "description": "Atención de urgencias 24 horas y medicina general.",
+        "active": true,
+        "icon": "hospital",
+        "updated_at": "2026-01-28"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.53, 3.41]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poi-002",
+      "properties": {
+        "name": "Institución Educativa Central",
+        "category": "educacion",
+        "description": "Sede principal - Educación básica y media.",
+        "active": true,
+        "icon": "school",
+        "updated_at": "2026-01-30"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.52, 3.41]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poi-003",
+      "properties": {
+        "name": "Parque del Perro",
+        "category": "recreacion",
+        "description": "Zona gastronómica y parque recreativo emblemático.",
+        "active": true,
+        "icon": "park",
+        "updated_at": "2026-01-25"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.5435, 3.4368]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poi-004",
+      "properties": {
+        "name": "Comando Policía Metropolitana",
+        "category": "seguridad",
+        "description": "Sede central de seguridad y atención ciudadana.",
+        "active": true,
+        "icon": "shield",
+        "updated_at": "2026-02-01"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.5212, 3.454]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poi-005",
+      "properties": {
+        "name": "Hospital Universitario del Valle",
+        "category": "salud",
+        "description": "Centro hospitalario de nivel 3 y 4.",
+        "active": true,
+        "icon": "hospital",
+        "updated_at": "2026-02-02"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.5322, 3.4344]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poi-006",
+      "properties": {
+        "name": "Universidad del Valle - San Fernando",
+        "category": "educacion",
+        "description": "Campus de Ciencias de la Salud.",
+        "active": true,
+        "icon": "university",
+        "updated_at": "2026-01-20"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.535, 3.4355]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poi-007",
+      "properties": {
+        "name": "Parque de la Caña",
+        "category": "recreacion",
+        "description": "Complejo recreativo y deportivo.",
+        "active": true,
+        "icon": "water-park",
+        "updated_at": "2026-01-15"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-76.498, 3.451]
+      }
+    }
+  ]
+}
