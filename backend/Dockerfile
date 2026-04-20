@@ -1,5 +1,5 @@
 # ── Etapa 1: Build ───────────────────────────────────────────
-FROM node:20-alpine AS builder
+FROM node:20-bullseye-slim AS builder
 
 WORKDIR /app
 
@@ -10,18 +10,23 @@ COPY . .
 RUN npx prisma generate
 RUN npm run build
 
+
 # ── Etapa 2: Producción ───────────────────────────────────────
-FROM node:20-alpine AS production
+FROM node:20-bullseye-slim AS production
 
 WORKDIR /app
 ENV NODE_ENV=production
 
+# 👇 importante para Prisma + OpenSSL
+RUN apt-get update && apt-get install -y openssl ca-certificates
+
 COPY package*.json ./
 RUN npm ci --only=production && npm cache clean --force
 
-COPY --from=builder /app/dist              ./dist
-COPY --from=builder /app/prisma            ./prisma
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/prisma ./prisma
 COPY --from=builder /app/node_modules/.prisma ./node_modules/.prisma
+COPY --from=builder /app/node_modules/@prisma ./node_modules/@prisma
 
 EXPOSE 4000
 

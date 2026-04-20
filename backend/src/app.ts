@@ -9,7 +9,11 @@ import { env }             from './config/env'
 import { prisma }          from './config/database'
 import authRoutes          from './routes/auth.routes'
 import { generalLimiter }  from './middlewares/rateLimiter.middleware'
+import path                from 'path'
 import { errorHandler }    from './middlewares/error.middleware'
+import filesRoutes         from './routes/files.routes'
+import aiRoutes            from './routes/ai.routes'
+import { authMiddleware }  from './middlewares/auth.middleware'
 
 const app = express()
 
@@ -39,7 +43,9 @@ app.get('/health', (_req, res) => {
 
 // ── Rutas ─────────────────────────────────────────────────────
 app.use('/auth', authRoutes)
-
+app.use('/files', filesRoutes)
+app.use('/ai',    aiRoutes)
+app.use('/uploads', authMiddleware as express.RequestHandler, express.static(path.resolve(process.cwd(), env.UPLOAD_DIR ?? 'uploads')))
 // ── 404 ───────────────────────────────────────────────────────
 app.use((_req, res) => {
   res.status(404).json({ success: false, message: 'Ruta no encontrada.' })

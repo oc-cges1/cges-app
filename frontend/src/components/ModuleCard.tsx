@@ -67,7 +67,7 @@ export default function ModuleCard({ module, index }: Props) {
       {/* Content */}
       <div style={{
         display:'flex', flexDirection:'column', alignItems:'center',
-        gap:14, padding:'28px 18px 22px', position:'relative', zIndex:1,
+        gap:14, padding:'58px 18px 22px', position:'relative', zIndex:1,
       }}>
         {/* Icon or image */}
         <div style={{
@@ -79,7 +79,7 @@ export default function ModuleCard({ module, index }: Props) {
               src={module.image}
               alt={module.name}
               style={{
-                width:64, height:64, objectFit:'contain',
+                width:150, height:150, objectFit:'contain',
                 position:'relative', zIndex:1,
                 filter: hovered
                   ? `drop-shadow(0 0 14px ${module.accentColor})`

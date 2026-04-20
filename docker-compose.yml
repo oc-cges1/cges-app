@@ -1,14 +1,13 @@
 services:
 
-  # ── PostgreSQL ───────────────────────────────────────────────
   postgres:
     image: postgres:16-alpine
     container_name: sisdep_postgres
     restart: unless-stopped
     environment:
-      POSTGRES_USER:     sisdep_user
+      POSTGRES_USER: sisdep_user
       POSTGRES_PASSWORD: sisdep_pass
-      POSTGRES_DB:       sisdep_db
+      POSTGRES_DB: sisdep_db
     ports:
       - "5432:5432"
     volumes:
@@ -16,47 +15,57 @@ services:
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U sisdep_user -d sisdep_db"]
       interval: 10s
-      timeout:  5s
-      retries:  5
+      timeout: 5s
+      retries: 5
 
-  # ── Backend ──────────────────────────────────────────────────
   backend:
     build:
-      context:    ./backend
+      context: ./backend
       dockerfile: Dockerfile
-      target:     builder
+      target: production
+
     container_name: sisdep_backend
     restart: unless-stopped
+
     depends_on:
       postgres:
         condition: service_healthy
+
     env_file: ./backend/.env
+
     environment:
       DATABASE_URL: "postgresql://sisdep_user:sisdep_pass@postgres:5432/sisdep_db?schema=public"
-      NODE_ENV:     development
+      NODE_ENV: production
+
     ports:
       - "4000:4000"
-    volumes:
-      - ./backend/src:/app/src
-    command: npm run dev
 
-  # ── Frontend ─────────────────────────────────────────────────
+    volumes:
+      - ./backend/uploads:/app/uploads
+
   frontend:
     build:
-      context:    ./frontend
+      context: ./frontend
       dockerfile: Dockerfile
-      target:     builder
+      target: builder
+
     container_name: sisdep_frontend
     restart: unless-stopped
+
     depends_on:
       - backend
+
     environment:
-      VITE_API_URL: ""
+      VITE_API_URL: "http://localhost:4000"
+
     ports:
       - "5173:5173"
+
     volumes:
       - ./frontend/src:/app/src
+
     command: npm run dev -- --host 0.0.0.0
 
 volumes:
   postgres_data:
+  

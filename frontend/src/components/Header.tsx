@@ -25,7 +25,7 @@ export default function Header() {
   return (
     <header style={{
       position:'sticky', top:0, zIndex:100,
-      background:'rgba(6,12,20,0.96)',
+      background:'rgba(6, 6, 20, 0.96)',
       backdropFilter:'blur(12px)',
       borderBottom:'1px solid rgba(255,255,255,0.06)',
     }}>

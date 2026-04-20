@@ -139,6 +139,17 @@ export const MODULES: Module[] = [
     accentColor: '#A07820',
     category:    'analisis',
   },
+  // Agregar al array MODULES:
+{
+  id:          'documentos',
+  name:        'Documentos e IA',
+  description: 'Chat con documentos PDF y PPT',
+  path:        '/documentos',
+  icon:        '🤖',
+  color:       '#07071a',
+  accentColor: '#7B3FCC',
+  category:    'analisis',
+},
 ]
 
 export const CATEGORY_LABELS: Record<Module['category'], string> = {

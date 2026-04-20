@@ -21,6 +21,9 @@ const envSchema = z.object({
   EMAIL_FROM:           z.string().optional(),
   RATE_LIMIT_WINDOW_MS: z.string().default('900000'),
   RATE_LIMIT_MAX:       z.string().default('100'),
+  ANTHROPIC_API_KEY:    z.string().min(1),
+  MAX_FILE_SIZE_MB:     z.string().default('10'),
+  UPLOAD_DIR:           z.string().default('uploads'),
 })
 
 const parsed = envSchema.safeParse(process.env)

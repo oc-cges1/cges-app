@@ -4,6 +4,7 @@ import { useState, useMemo } from 'react'
 import ModuleCard            from '@/components/ModuleCard'
 import { MODULES, CATEGORY_LABELS } from '@/data/modules'
 import { Module }            from '@/types/modules'
+import { BannerCarousel } from '@/components/BannerCarousel';
 
 type Filter = Module['category'] | 'all'
 
@@ -52,17 +53,18 @@ export default function Dashboard() {
             <h1 style={{
               fontFamily:'Rajdhani, Arial Narrow, sans-serif',
               fontSize:'clamp(28px,4vw,48px)', fontWeight:700,
-              letterSpacing:'0.06em', color:'#E8EDF2', lineHeight:1, marginBottom:14,
+              letterSpacing:'0.06em', color:'#989393', lineHeight:1, marginBottom:14,
             }}>CGES — Centro de Gestión de Emergencias y Seguridad</h1>
             <p style={{ fontSize:14, lineHeight:1.65, color:'#7A8FA6', maxWidth:460 }}>
               Acceso centralizado a todos los módulos operativos del departamento.
               Seleccione un módulo para ingresar.
             </p>
+            <BannerCarousel />
           </div>
 
           <div style={{ display:'flex', gap:16 }}>
             {[
-              { value:'13',    label:'Módulos'    },
+              { value:'14',    label:'Módulos'    },
               { value:'24/7',  label:'Monitoreo'  },
               { value:'98.4%', label:'Uptime'     },
             ].map((s) => (
@@ -107,7 +109,7 @@ export default function Dashboard() {
               width:'100%', height:36, padding:'0 12px 0 34px',
               background:'rgba(255,255,255,0.04)',
               border:'1px solid rgba(255,255,255,0.07)',
-              borderRadius:4, color:'#E8EDF2',
+              borderRadius:4, color:'#05182a',
               fontFamily:'Inter, sans-serif', fontSize:13, outline:'none',
             }}
           />
@@ -162,6 +164,7 @@ export default function Dashboard() {
               }}
             >Limpiar filtros</button>
           </div>
+          
         )}
       </section>
     </main>

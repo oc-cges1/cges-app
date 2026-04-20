@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(242, 242, 247);
+  padding: 10px 20px;
+  flex-wrap: wrap; /* evita que se rompa en pantallas pequeñas */
+}
+
+/* Imagen izquierda */
+.logo-left {
+  max-width: 100%;
+  width: 350px; /* tamaño base */
+  height: auto;
+}
+
+/* Imagen derecha */
+.logo-right {
+  max-width: 100%;
+  width: 180px;
+  height: auto;
+}
+
+/* 📱 Responsive (pantallas pequeñas) */
+@media (max-width: 768px) {
+  .header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .logo-left,
+  .logo-right {
+    width: 70%;
+    margin: 5px 0;
+  }
+}

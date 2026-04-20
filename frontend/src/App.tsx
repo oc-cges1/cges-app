@@ -9,12 +9,18 @@ import Dashboard             from '@/pages/Dashboard'
 import ObservatorioPage      from '@/pages/ObservatorioPage'
 import ModulePlaceholder     from '@/pages/ModulePlaceholder'
 import LookerStudioPage      from '@/pages/LookerStudioPage'
+import CamarasDashboardPage  from '@/pages/CamarasDashboardPage'
+import IntroPage             from '@/pages/IntroPage'
+import DocumentsPage         from '@/features/documents/pages/DocumentsPage'
+import SdsPage               from '@/pages/SdsPage'
+import SdsDocumentosPage     from '@/pages/SdsDocumentosPage'
 
 // Auth pages — no lazy (son livianas)
 import LoginPage          from '@/features/auth/pages/LoginPage'
 import RegisterPage       from '@/features/auth/pages/RegisterPage'
 import ForgotPasswordPage from '@/features/auth/pages/ForgotPasswordPage'
 import ResetPasswordPage  from '@/features/auth/pages/ResetPasswordPage'
+import SubModulePage from './pages/SubModulePage'
 
 const GeoPage = lazy(() => import('@/pages/GeoPage'))
 
@@ -51,6 +57,8 @@ export default function App() {
       <Route path="/auth/register"        element={<RegisterPage />} />
       <Route path="/auth/forgot-password" element={<ForgotPasswordPage />} />
       <Route path="/auth/reset-password"  element={<ResetPasswordPage />} />
+      <Route path="/intro" element={<IntroPage />} />
+      <Route path="/documentos" element={<DocumentsPage />} />
 
       {/* ── Rutas protegidas ── con Header/Footer ───────────── */}
       <Route path="/*" element={
@@ -59,16 +67,20 @@ export default function App() {
             <Routes>
 
               {/* Panel principal */}
-              <Route path="/"
-                element={<Dashboard />} />
+              <Route path="/" element={<Dashboard />} />
+
+              {/* SDS */}
               <Route path="/sistema-departamental-de-seguridad"
-                element={<ModulePlaceholder moduleId="sistema-departamental-de-seguridad" />} />
+                  element={<SdsPage />} />
+              <Route path="/sistema-departamental-de-seguridad/documentos"
+                  element={<SdsDocumentosPage />} />
 
               {/* Mapas */}
               <Route path="/georeferenciacion"
                 element={<GeoPage />} />
-              <Route path="/camaras"
-                element={<GeoPage />} />
+              <Route path="/camaras"           element={<SubModulePage moduleId="camaras" />} />
+              <Route path="/camaras/mapa"      element={<GeoPage />} />
+              <Route path="/camaras/dashboard" element={<CamarasDashboardPage />} />
               <Route path="/mapa-criminal"
                 element={<ModulePlaceholder moduleId="mapa-criminal" />} />
 
@@ -108,5 +120,9 @@ export default function App() {
       } />
 
     </Routes>
+
   )
+  
 }
+
+      

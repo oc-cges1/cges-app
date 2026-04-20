@@ -1,0 +1,29 @@
+.banner {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+}
+
+.banner-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 45s linear infinite;
+}
+
+.banner img {
+  height: 120px;
+  margin: 0 30px;
+  object-fit: contain;
+}
+
+/* Animación */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

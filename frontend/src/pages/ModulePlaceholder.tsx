@@ -98,7 +98,7 @@ export default function ModulePlaceholder({ moduleId }: Props) {
         <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:10, width:'100%' }}>
           {[
             { label:'Estado',    value:'Próximamente' },
-            { label:'Categoría', value:mod.category   },
+            { label:'Categoría', value: 'category' in mod ? mod.category : 'Submódulo' },
             { label:'Ruta',      value:mod.path        },
           ].map((item) => (
             <div key={item.label} style={{

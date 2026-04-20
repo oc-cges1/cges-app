@@ -40,6 +40,8 @@ export default function PrivateRoute({ children, allowedRoles }: Props) {
   if (allowedRoles && role && !allowedRoles.includes(role)) {
     return <Navigate to="/" replace />
   }
-
+if (isAuthenticated && !sessionStorage.getItem('intro_seen') && location.pathname !== '/intro') {
+  return <Navigate to="/intro" replace />
+}
   return <>{children}</>
 }
