@@ -1,41 +1,85 @@
-# Dependencias
+# ==========================================
+# DEPENDENCIAS
+# ==========================================
 node_modules/
 **/node_modules/
+.pnpm-store/
+jspm_packages/
 
-# Build
+# ==========================================
+# BUILD / PRODUCCIÓN
+# ==========================================
 dist/
 build/
+out/
+.next/
+.cache/
+*.tsbuildinfo
+*.tlog
 
-# Variables de entorno — NUNCA al repositorio
+# ==========================================
+# SEGURIDAD Y VARIABLES DE ENTORNO
+# ==========================================
+# NUNCA subas estos archivos a GitHub
 .env
 .env.local
-.env.production
-.env*.local
+.env.development.local
+.env.test.local
+.env.production.local
 backend/.env
+frontend/.env
+docker-compose.override.yml
 
-# Logs
+# ==========================================
+# ARCHIVOS DE USUARIO / UPLOADS
+# ==========================================
+# Ignoramos los archivos subidos por el admin para no llenar el repo
+# Pero permitimos que la carpeta exista mediante .gitkeep
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ==========================================
+# BASE DE DATOS Y PRISMA
+# ==========================================
+# Ignoramos la base de datos local (si usas SQLite)
+*.db
+*.db-journal
+# El motor generado por Prisma
+node_modules/.prisma
+# Opcional: Si no quieres subir las migraciones (aunque se recomienda subirlas)
+# backend/prisma/migrations/*.sql
+
+# ==========================================
+# LOGS Y TEMPORALES
+# ==========================================
 *.log
 logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.npm
+.eslintcache
 
-# Backups
-backups/
-
-# Docker
-.docker/
-
-# SSL
-ssl/
-*.pem
-*.key
-*.crt
-
-# OS
+# ==========================================
+# SISTEMA OPERATIVO Y EDITORES
+# ==========================================
 .DS_Store
 Thumbs.db
-
-# IDE
-.vscode/settings.json
+.vscode/
+!.vscode/extensions.json
+!.vscode/launch.json
 .idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
 
-# Prisma
-backend/prisma/migrations/*.sql
+# ==========================================
+# DOCKER
+# ==========================================
+.docker/
+# Si guardas datos de volumen de DB localmente
+pgdata/
+mysql_data/
