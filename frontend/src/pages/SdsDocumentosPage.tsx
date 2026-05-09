@@ -12,15 +12,16 @@ import {
   formatFileSize,
 }                         from '@/features/documents/api'
 import type { FileRecord } from '@/features/documents/types'
+import { getStoredToken } from '@/features/auth/api'
 
-// ─── Tipos locales ────────────────────────────────────────────
+// ─── Tipos ────────────────────────────────────────────────────
 
 type PreviewState =
   | { kind: 'none' }
-  | { kind: 'pdf'; file: FileRecord }
+  | { kind: 'pdf'; file: FileRecord; blobUrl: string }
   | { kind: 'ppt'; file: FileRecord }
 
-// ─── Helpers ──────────────────────────────────────────────────
+// ─── Constantes ───────────────────────────────────────────────
 
 const ACCEPTED_TYPES = [
   'application/pdf',
@@ -31,42 +32,56 @@ const ACCEPTED_EXT = ['.pdf', '.ppt', '.pptx']
 const MAX_MB       = 10
 const MAX_BYTES    = MAX_MB * 1024 * 1024
 
+// ─── Helpers ──────────────────────────────────────────────────
+
 function fileIcon(mimeType: string): string {
   return mimeType === 'application/pdf' ? '📕' : '📊'
 }
 
 function fileLabel(mimeType: string): string {
-  if (mimeType === 'application/pdf')                 return 'PDF'
-  if (mimeType === 'application/vnd.ms-powerpoint')  return 'PPT'
+  if (mimeType === 'application/pdf')                return 'PDF'
+  if (mimeType === 'application/vnd.ms-powerpoint') return 'PPT'
   return 'PPTX'
 }
 
 // ─── Componente principal ─────────────────────────────────────
 
 export default function SdsDocumentosPage() {
-  const navigate            = useNavigate()
-  const inputRef            = useRef<HTMLInputElement>(null)
-  const { isAdmin, role }   = useAuth()
-  const canUpload           = isAdmin || role === 'ADMIN'
+  const navigate          = useNavigate()
+  const inputRef          = useRef<HTMLInputElement>(null)
+  const { isAdmin, role } = useAuth()
 
-  const [files,    setFiles]    = useState<FileRecord[]>([])
-  const [preview,  setPreview]  = useState<PreviewState>({ kind: 'none' })
-  const [dragging, setDragging] = useState(false)
-  const [loading,  setLoading]  = useState(true)
-  const [uploading,setUploading]= useState(false)
-  const [error,    setError]    = useState('')
-  const [success,  setSuccess]  = useState('')
+  // ADMIN puede subir y eliminar. OPERATOR solo puede subir.
+  // Ajuste aquí los roles que necesite:
+  const canUpload = isAdmin || role === 'OPERATOR'
+  const canDelete = isAdmin
+
+  const [files,     setFiles]     = useState<FileRecord[]>([])
+  const [preview,   setPreview]   = useState<PreviewState>({ kind: 'none' })
+  const [dragging,  setDragging]  = useState(false)
+  const [loading,   setLoading]   = useState(true)
+  const [uploading, setUploading] = useState(false)
+  const [error,     setError]     = useState('')
+  const [success,   setSuccess]   = useState('')
 
   const accentColor = '#C4940A'
 
-  // ── Cargar archivos del backend ─────────────────────────────
+  // ── Limpiar blob URL al desmontar ────────────────────────────
+  useEffect(() => {
+    return () => {
+      if (preview.kind === 'pdf') URL.revokeObjectURL(preview.blobUrl)
+    }
+  }, [preview])
+
+  // ── Cargar archivos del backend ──────────────────────────────
   const loadFiles = useCallback(async () => {
     setLoading(true)
+    setError('')
     try {
       const data = await fetchFiles(1)
       setFiles(data.files)
     } catch {
-      setError('No se pudieron cargar los archivos.')
+      setError('No se pudieron cargar los archivos del servidor.')
     } finally {
       setLoading(false)
     }
@@ -74,7 +89,7 @@ export default function SdsDocumentosPage() {
 
   useEffect(() => { loadFiles() }, [loadFiles])
 
-  // ── Subir archivo al backend ────────────────────────────────
+  // ── Subir archivo al backend ─────────────────────────────────
   const addFile = useCallback(async (file: File) => {
     setError(''); setSuccess('')
 
@@ -89,43 +104,79 @@ export default function SdsDocumentosPage() {
     try {
       await uploadFile(file)
       setSuccess(`"${file.name}" subido correctamente.`)
-      await loadFiles()           // refrescar lista desde backend
+      await loadFiles()
       setTimeout(() => setSuccess(''), 4000)
-    } catch {
-      setError('Error al subir el archivo. Verifique su conexión.')
+    } catch (err: unknown) {
+      // Mostrar mensaje específico si es 403
+      const status = (err as { response?: { status?: number } })?.response?.status
+      if (status === 403) {
+        setError('No tienes permisos para subir archivos. Contacta al administrador.')
+      } else {
+        setError('Error al subir el archivo. Verifique su conexión e intente de nuevo.')
+      }
     } finally {
       setUploading(false)
     }
   }, [loadFiles])
 
-  // ── Eliminar archivo del backend ────────────────────────────
+  // ── Eliminar archivo del backend ─────────────────────────────
   const handleDelete = async (file: FileRecord) => {
     if (!confirm(`¿Eliminar "${file.originalName}"?`)) return
     try {
       await deleteFile(file.id)
-      setPreview(p => (p.kind !== 'none' && p.file.id === file.id) ? { kind:'none' } : p)
+      // Si el archivo eliminado estaba en preview, cerrarlo
+      if (preview.kind !== 'none' && preview.file.id === file.id) {
+        if (preview.kind === 'pdf') URL.revokeObjectURL(preview.blobUrl)
+        setPreview({ kind: 'none' })
+      }
       await loadFiles()
     } catch {
       setError('No se pudo eliminar el archivo.')
     }
   }
 
-  // ── Descarga real desde backend ─────────────────────────────
-  const handleDownload = (file: FileRecord) => {
-    const a   = document.createElement('a')
-    a.href     = getFileDownloadUrl(file.storedName)
-    a.download = file.originalName
-    a.target   = '_blank'
-    a.click()
+  // ── Descarga desde backend con token ─────────────────────────
+  const handleDownload = async (file: FileRecord) => {
+    try {
+      const token    = getStoredToken()
+      const response = await fetch(getFileDownloadUrl(file.storedName), {
+        headers: token ? { Authorization: `Bearer ${token}` } : {},
+      })
+      if (!response.ok) throw new Error('Error al descargar')
+      const blob = await response.blob()
+      const url  = URL.createObjectURL(blob)
+      const a    = document.createElement('a')
+      a.href     = url
+      a.download = file.originalName
+      a.click()
+      setTimeout(() => URL.revokeObjectURL(url), 5000)
+    } catch {
+      setError('No se pudo descargar el archivo.')
+    }
   }
 
-  // ── Preview ──────────────────────────────────────────────────
-  const openPreview = (file: FileRecord) => {
-    setPreview(
-      file.mimeType === 'application/pdf'
-        ? { kind: 'pdf', file }
-        : { kind: 'ppt', file }
-    )
+  // ── Vista previa: PDF con blob (evita problema de auth en iframe) ──
+  const openPreview = async (file: FileRecord) => {
+    
+    // Limpiar blob anterior si existía
+    if (preview.kind === 'pdf') URL.revokeObjectURL(preview.blobUrl)
+
+    if (file.mimeType === 'application/pdf') {
+      try {
+        const token    = getStoredToken()
+        const response = await fetch(getFilePreviewUrl(file.storedName), {
+          headers: token ? { Authorization: `Bearer ${token}` } : {},
+        })
+        if (!response.ok) throw new Error('No se pudo obtener el PDF')
+        const blob    = await response.blob()
+        const blobUrl = URL.createObjectURL(blob)
+        setPreview({ kind: 'pdf', file, blobUrl })
+      } catch {
+        setError('No se pudo cargar la vista previa del PDF.')
+      }
+    } else {
+      setPreview({ kind: 'ppt', file })
+    }
   }
 
   // ── Drag & Drop ──────────────────────────────────────────────
@@ -137,11 +188,11 @@ export default function SdsDocumentosPage() {
     if (file) addFile(file)
   }
 
-  // ─── Render ───────────────────────────────────────────────────
+  // ─── Render ──────────────────────────────────────────────────
   return (
     <main style={{ flex:1, display:'flex', flexDirection:'column' }}>
 
-      {/* Hero / cabecera */}
+      {/* ── Hero / cabecera ──────────────────────────────────── */}
       <section style={{
         position:'relative', padding:'40px 32px 32px',
         borderBottom:'1px solid rgba(255,255,255,0.06)', overflow:'hidden',
@@ -161,15 +212,15 @@ export default function SdsDocumentosPage() {
           {/* Breadcrumb */}
           <div style={{ display:'flex', alignItems:'center', gap:8, marginBottom:16, fontSize:12, color:'#4A6078', letterSpacing:'0.04em' }}>
             {[
-              { label:'Panel Principal',          path:'/'  },
-              { label:'Sistema Departamental',    path:'/sistema-departamental-de-seguridad' },
+              { label:'Panel Principal',       path:'/' },
+              { label:'Sistema Departamental', path:'/sistema-departamental-de-seguridad' },
             ].map((bc, i) => (
               <span key={i} style={{ display:'flex', alignItems:'center', gap:8 }}>
                 <span
                   onClick={() => navigate(bc.path)}
                   style={{ color:accentColor, cursor:'pointer' }}
-                  onMouseEnter={(e) => (e.currentTarget.style.textDecoration='underline')}
-                  onMouseLeave={(e) => (e.currentTarget.style.textDecoration='none')}
+                  onMouseEnter={(e) => (e.currentTarget.style.textDecoration = 'underline')}
+                  onMouseLeave={(e) => (e.currentTarget.style.textDecoration = 'none')}
                 >{bc.label}</span>
                 <span style={{ color:'#2E4055' }}>/</span>
               </span>
@@ -190,14 +241,19 @@ export default function SdsDocumentosPage() {
               }}>Documentos</h1>
             </div>
           </div>
+
           <p style={{ fontSize:14, lineHeight:1.65, color:'#7A8FA6', maxWidth:520 }}>
             Gestión persistente de documentos institucionales. Los archivos se almacenan en el servidor.
-            {!canUpload && ' Necesitas rol ADMIN o EDITOR para subir archivos.'}
+            {!canUpload && (
+              <span style={{ color:'#CC2B2B', marginLeft:4 }}>
+                Necesitas rol ADMIN u OPERATOR para subir archivos.
+              </span>
+            )}
           </p>
         </div>
       </section>
 
-      {/* Layout principal */}
+      {/* ── Layout principal ─────────────────────────────────── */}
       <div style={{
         flex:1, display:'grid',
         gridTemplateColumns: preview.kind !== 'none' ? '1fr 1.6fr' : '1fr',
@@ -206,14 +262,14 @@ export default function SdsDocumentosPage() {
 
         {/* Panel izquierdo */}
         <div style={{
-          display:'flex', flexDirection:'column', gap:0,
+          display:'flex', flexDirection:'column',
           borderRight: preview.kind !== 'none' ? '1px solid rgba(255,255,255,0.06)' : 'none',
           overflow:'auto',
         }}>
 
-          {/* Zona de carga — solo si tiene permiso */}
+          {/* Zona de carga */}
           {canUpload && (
-            <div style={{ padding:'32px 32px 10px' }}>
+            <div style={{ padding:'28px 32px 0' }}>
               <div
                 onClick={() => !uploading && inputRef.current?.click()}
                 onDragOver={onDragOver}
@@ -221,17 +277,16 @@ export default function SdsDocumentosPage() {
                 onDrop={onDrop}
                 style={{
                   border:`2px dashed ${dragging ? accentColor : 'rgba(255,255,255,0.12)'}`,
-                  borderRadius:10, padding:'20px 0px', textAlign:'center',
+                  borderRadius:10, padding:'32px 24px', textAlign:'center',
                   cursor: uploading ? 'not-allowed' : 'pointer',
                   background: dragging ? `${accentColor}08` : 'rgba(255,255,255,0.02)',
-                  transition:'all 200ms',
-                  opacity: uploading ? 0.7 : 1,
+                  transition:'all 200ms', opacity: uploading ? 0.7 : 1,
                 }}
               >
                 <div style={{
-                  width:40, height:40, borderRadius:'50%', margin:'0 auto 14px',
+                  width:44, height:44, borderRadius:'50%', margin:'0 auto 14px',
                   background:`${accentColor}18`, border:`1px solid ${accentColor}40`,
-                  display:'flex', alignItems:'center', justifyContent:'center', fontSize:60,
+                  display:'flex', alignItems:'center', justifyContent:'center', fontSize:22,
                 }}>
                   {uploading ? '⏳' : '📎'}
                 </div>
@@ -239,15 +294,14 @@ export default function SdsDocumentosPage() {
                   {uploading ? 'Subiendo al servidor...' : dragging ? 'Suelta aquí' : 'Arrastra archivos o haz clic'}
                 </p>
                 <p style={{ fontSize:12, color:'#4A6078', marginBottom:14 }}>
-                  PDF · PPT · PPTX — máx. {MAX_MB} MB — se guardan en el servidor
+                  PDF · PPT · PPTX — máx. {MAX_MB} MB
                 </p>
                 <span style={{
                   display:'inline-block', padding:'7px 22px',
                   background:`${accentColor}15`, border:`1px solid ${accentColor}50`,
                   borderRadius:4, color:accentColor,
                   fontSize:12, fontWeight:600, letterSpacing:'0.1em',
-                  fontFamily:'Rajdhani, Arial Narrow, sans-serif',
-                  pointerEvents:'none',
+                  fontFamily:'Rajdhani, Arial Narrow, sans-serif', pointerEvents:'none',
                 }}>
                   {uploading ? 'SUBIENDO...' : 'SELECCIONAR ARCHIVOS'}
                 </span>
@@ -256,38 +310,68 @@ export default function SdsDocumentosPage() {
                   type="file"
                   accept={ACCEPTED_EXT.join(',')}
                   style={{ display:'none' }}
-                  onChange={(e) => { const f = e.target.files?.[0]; if (f) addFile(f); e.target.value = '' }}
+                  onChange={(e) => {
+                    const f = e.target.files?.[0]
+                    if (f) addFile(f)
+                    e.target.value = ''
+                  }}
                 />
               </div>
 
-              {error   && <div style={{ marginTop:10, padding:'8px 14px', background:'rgba(204,43,43,0.08)', border:'1px solid rgba(204,43,43,0.2)', borderRadius:6, fontSize:12, color:'#e87878' }}>{error}</div>}
-              {success && <div style={{ marginTop:10, padding:'8px 14px', background:'rgba(20,180,90,0.08)', border:'1px solid rgba(20,180,90,0.2)', borderRadius:6, fontSize:12, color:'#14B45A' }}>{success}</div>}
+              {error   && (
+                <div style={{ marginTop:10, padding:'10px 14px', background:'rgba(204,43,43,0.08)', border:'1px solid rgba(204,43,43,0.25)', borderRadius:6, fontSize:13, color:'#e87878', lineHeight:1.5 }}>
+                  {error}
+                </div>
+              )}
+              {success && (
+                <div style={{ marginTop:10, padding:'10px 14px', background:'rgba(20,180,90,0.08)', border:'1px solid rgba(20,180,90,0.25)', borderRadius:6, fontSize:13, color:'#14B45A' }}>
+                  {success}
+                </div>
+              )}
             </div>
           )}
 
-          {/* Lista de archivos del servidor */}
+          {/* Error cuando no puede subir */}
+          {!canUpload && error && (
+            <div style={{ margin:'16px 32px 0', padding:'10px 14px', background:'rgba(204,43,43,0.08)', border:'1px solid rgba(204,43,43,0.25)', borderRadius:6, fontSize:13, color:'#e87878' }}>
+              {error}
+            </div>
+          )}
+
+          {/* Lista de archivos */}
           <div style={{ padding:'24px 32px 32px' }}>
             <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:14 }}>
               <span style={{ fontSize:10, fontWeight:500, letterSpacing:'0.14em', textTransform:'uppercase', color:'#4A6078' }}>
-                {loading ? 'Cargando...' : `${files.length} ${files.length === 1 ? 'archivo' : 'archivos'} en servidor`}
+                {loading
+                  ? 'Cargando...'
+                  : `${files.length} ${files.length === 1 ? 'archivo' : 'archivos'} en servidor`}
               </span>
               <button
                 onClick={loadFiles}
                 disabled={loading}
-                style={{ background:'transparent', border:'none', color:'#1A7FBF', fontSize:11, cursor:'pointer', letterSpacing:'0.04em' }}
+                style={{
+                  background:'transparent', border:'none',
+                  color:'#1A7FBF', fontSize:11, cursor:'pointer', letterSpacing:'0.04em',
+                }}
               >
                 ↻ Actualizar
               </button>
             </div>
 
             {loading ? (
-              <div style={{ textAlign:'center', padding:'40px 0', color:'#4A6078', fontSize:13 }}>
-                <span style={{ display:'block', fontSize:28, marginBottom:10 }}>⏳</span>
+              <div style={{ textAlign:'center', padding:'48px 0', color:'#4A6078', fontSize:13 }}>
+                <div style={{
+                  width:32, height:32, border:'2px solid rgba(26,127,191,0.2)',
+                  borderTop:'2px solid #1A7FBF', borderRadius:'50%',
+                  margin:'0 auto 14px',
+                  animation:'spin 0.8s linear infinite',
+                }} />
                 Cargando documentos...
+                <style>{`@keyframes spin{to{transform:rotate(360deg)}}`}</style>
               </div>
             ) : files.length === 0 ? (
-              <div style={{ textAlign:'center', padding:'40px 0', color:'#2E4055', fontSize:13 }}>
-                <span style={{ display:'block', fontSize:32, marginBottom:10, opacity:0.3 }}>📂</span>
+              <div style={{ textAlign:'center', padding:'48px 0', color:'#2E4055', fontSize:13 }}>
+                <span style={{ display:'block', fontSize:36, marginBottom:12, opacity:0.25 }}>📂</span>
                 No hay archivos en el servidor aún
               </div>
             ) : (
@@ -298,7 +382,7 @@ export default function SdsDocumentosPage() {
                     file={file}
                     accentColor={accentColor}
                     isActive={preview.kind !== 'none' && preview.file.id === file.id}
-                    canDelete={isAdmin}
+                    canDelete={canDelete}
                     onPreview={() => openPreview(file)}
                     onDownload={() => handleDownload(file)}
                     onRemove={() => handleDelete(file)}
@@ -314,7 +398,10 @@ export default function SdsDocumentosPage() {
           <PreviewPanel
             preview={preview}
             accentColor={accentColor}
-            onClose={() => setPreview({ kind:'none' })}
+            onClose={() => {
+              if (preview.kind === 'pdf') URL.revokeObjectURL(preview.blobUrl)
+              setPreview({ kind: 'none' })
+            }}
             onDownload={() => handleDownload(preview.file)}
           />
         )}
@@ -344,9 +431,9 @@ function FileRow({
       onMouseLeave={() => setHovered(false)}
       style={{
         display:'flex', alignItems:'center', gap:12, padding:'12px 14px',
-        background: isActive ? `${accentColor}12` : hovered ? 'rgba(255,255,255,0.03)' : '#0D1B2A',
-        border:`1px solid ${isActive ? `${accentColor}40` : hovered ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.06)'}`,
-        borderRadius:8, transition:'all 150ms',
+        background:   isActive ? `${accentColor}12` : hovered ? 'rgba(255,255,255,0.03)' : '#0D1B2A',
+        border:       `1px solid ${isActive ? `${accentColor}40` : hovered ? 'rgba(255,255,255,0.1)' : 'rgba(255,255,255,0.06)'}`,
+        borderRadius: 8, transition:'all 150ms',
       }}
     >
       <span style={{ fontSize:22, flexShrink:0 }}>{fileIcon(file.mimeType)}</span>
@@ -356,6 +443,7 @@ function FileRow({
           fontSize:13, fontWeight:500,
           color: isActive ? accentColor : '#E8EDF2',
           overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap', marginBottom:3,
+          transition:'color 150ms',
         }}>
           {file.originalName}
         </p>
@@ -364,7 +452,9 @@ function FileRow({
             background:`${accentColor}18`, border:`1px solid ${accentColor}30`,
             borderRadius:3, padding:'1px 6px', fontSize:10, color:accentColor,
             marginRight:6, fontWeight:600, letterSpacing:'0.06em',
-          }}>{fileLabel(file.mimeType)}</span>
+          }}>
+            {fileLabel(file.mimeType)}
+          </span>
           {formatFileSize(file.size)} · {file.uploadedBy.name} · {new Date(file.createdAt).toLocaleDateString('es-CO')}
         </p>
       </div>
@@ -396,22 +486,28 @@ function FileRow({
 // ─── ActionBtn ────────────────────────────────────────────────
 
 function ActionBtn({ children, title, color, onClick }: {
-  children: React.ReactNode; title: string; color: string; onClick: () => void
+  children: React.ReactNode
+  title:    string
+  color:    string
+  onClick:  () => void
 }) {
   const [hov, setHov] = useState(false)
   return (
     <button
-      title={title} onClick={onClick}
+      title={title}
+      onClick={onClick}
       onMouseEnter={() => setHov(true)}
       onMouseLeave={() => setHov(false)}
       style={{
         width:36, height:32, display:'flex', alignItems:'center', justifyContent:'center',
-        background: hov ? `${color}18` : 'transparent',
-        border:`1px solid ${hov ? `${color}50` : 'rgba(255,255,255,0.08)'}`,
-        borderRadius:4, color: hov ? color : '#4A6078',
+        background:   hov ? `${color}18` : 'transparent',
+        border:       `1px solid ${hov ? `${color}50` : 'rgba(255,255,255,0.08)'}`,
+        borderRadius: 4, color: hov ? color : '#4A6078',
         cursor:'pointer', transition:'all 150ms', flexShrink:0,
       }}
-    >{children}</button>
+    >
+      {children}
+    </button>
   )
 }
 
@@ -426,13 +522,10 @@ function PreviewPanel({ preview, accentColor, onClose, onDownload }: {
   if (preview.kind === 'none') return null
   const { file } = preview
 
-  // URL real del backend para el iframe
-  const previewUrl = getFilePreviewUrl(file.storedName)
-
   return (
     <div style={{ display:'flex', flexDirection:'column', height:'100%', minHeight:500 }}>
 
-      {/* Barra del preview */}
+      {/* Barra superior */}
       <div style={{
         display:'flex', alignItems:'center', justifyContent:'space-between', gap:12,
         padding:'14px 24px', borderBottom:'1px solid rgba(255,255,255,0.06)',
@@ -459,7 +552,10 @@ function PreviewPanel({ preview, accentColor, onClose, onDownload }: {
               borderRadius:4, color:accentColor,
               fontSize:12, letterSpacing:'0.06em', cursor:'pointer',
               fontFamily:'Rajdhani, Arial Narrow, sans-serif', fontWeight:600,
+              transition:'background 150ms',
             }}
+            onMouseEnter={(e) => (e.currentTarget.style.background = `${accentColor}25`)}
+            onMouseLeave={(e) => (e.currentTarget.style.background = `${accentColor}15`)}
           >
             <svg width="12" height="12" viewBox="0 0 16 16" fill="none">
               <path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -468,11 +564,14 @@ function PreviewPanel({ preview, accentColor, onClose, onDownload }: {
           </button>
           <button
             onClick={onClose}
+            title="Cerrar vista previa"
             style={{
               width:34, height:32, display:'flex', alignItems:'center', justifyContent:'center',
               background:'transparent', border:'1px solid rgba(255,255,255,0.1)',
-              borderRadius:4, color:'#4A6078', cursor:'pointer',
+              borderRadius:4, color:'#4A6078', cursor:'pointer', transition:'all 150ms',
             }}
+            onMouseEnter={(e) => { e.currentTarget.style.color = '#E8EDF2'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.25)' }}
+            onMouseLeave={(e) => { e.currentTarget.style.color = '#4A6078'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.1)' }}
           >
             <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
               <path d="M3 3l10 10M13 3L3 13" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
@@ -481,42 +580,53 @@ function PreviewPanel({ preview, accentColor, onClose, onDownload }: {
         </div>
       </div>
 
-      {/* Área de preview */}
+      {/* Área de contenido */}
       <div style={{ flex:1, overflow:'hidden', background:'#060C14', position:'relative' }}>
 
+        {/* PDF — iframe con blob URL (no necesita auth header) */}
         {preview.kind === 'pdf' && (
           <iframe
-            src={`${previewUrl}#toolbar=1&navpanes=1`}
+            src={`${preview.blobUrl}#toolbar=1&navpanes=1`}
             style={{ width:'100%', height:'100%', border:'none', display:'block' }}
             title={file.originalName}
           />
         )}
 
+        {/* PPT/PPTX — sin preview nativo en navegador */}
         {preview.kind === 'ppt' && (
           <div style={{
             display:'flex', flexDirection:'column', alignItems:'center',
             justifyContent:'center', height:'100%', gap:20, padding:40, textAlign:'center',
           }}>
-            <span style={{ fontSize:64, filter:`drop-shadow(0 0 20px ${accentColor}60)`, animation:'docFloat 3s ease-in-out infinite' }}>📊</span>
+            <span style={{
+              fontSize:64,
+              filter:`drop-shadow(0 0 20px ${accentColor}60)`,
+              animation:'docFloat 3s ease-in-out infinite',
+            }}>📊</span>
             <style>{`@keyframes docFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}`}</style>
+
             <div>
               <p style={{ fontFamily:'Rajdhani, Arial Narrow, sans-serif', fontSize:20, fontWeight:700, color:'#E8EDF2', letterSpacing:'0.06em', marginBottom:8 }}>
                 {file.originalName}
               </p>
               <p style={{ fontSize:13, color:'#7A8FA6', lineHeight:1.65, maxWidth:360 }}>
-                Los archivos PowerPoint no se pueden previsualizar en el navegador.
+                Los archivos PowerPoint no se pueden previsualizar directamente en el navegador.
                 Descárgalo para abrirlo con Microsoft PowerPoint o Google Slides.
               </p>
             </div>
+
             <button
               onClick={onDownload}
               style={{
-                display:'flex', alignItems:'center', gap:8, padding:'10px 24px',
+                display:'flex', alignItems:'center', gap:8, padding:'10px 28px',
                 background:`${accentColor}18`, border:`1px solid ${accentColor}50`,
                 borderRadius:6, color:accentColor,
                 fontFamily:'Rajdhani, Arial Narrow, sans-serif',
                 fontSize:14, fontWeight:600, letterSpacing:'0.1em', cursor:'pointer',
+                transition:'background 200ms',
               }}
+              onMouseEnter={(e) => (e.currentTarget.style.background = `${accentColor}28`)}
+              onMouseLeave={(e) => (e.currentTarget.style.background = `${accentColor}18`)}
             >
               <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
                 <path d="M8 2v8M5 7l3 3 3-3M3 13h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
@@ -524,11 +634,12 @@ function PreviewPanel({ preview, accentColor, onClose, onDownload }: {
               Descargar {fileLabel(file.mimeType)}
             </button>
 
-            {/* Metadata */}
+            {/* Metadata del archivo */}
             <div style={{
               display:'grid', gridTemplateColumns:'1fr 1fr', gap:'8px 24px',
               padding:'16px 24px', background:'rgba(255,255,255,0.03)',
-              border:'1px solid rgba(255,255,255,0.06)', borderRadius:8, width:'100%', maxWidth:360,
+              border:'1px solid rgba(255,255,255,0.06)', borderRadius:8,
+              width:'100%', maxWidth:360,
             }}>
               {[
                 { label:'Formato',    value: fileLabel(file.mimeType) },
@@ -537,8 +648,12 @@ function PreviewPanel({ preview, accentColor, onClose, onDownload }: {
                 { label:'Fecha',      value: new Date(file.createdAt).toLocaleDateString('es-CO') },
               ].map(item => (
                 <div key={item.label}>
-                  <p style={{ fontSize:10, color:'#4A6078', letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:3 }}>{item.label}</p>
-                  <p style={{ fontSize:13, color:'#E8EDF2', fontWeight:500 }}>{item.value}</p>
+                  <p style={{ fontSize:10, color:'#4A6078', letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:3 }}>
+                    {item.label}
+                  </p>
+                  <p style={{ fontSize:13, color:'#E8EDF2', fontWeight:500 }}>
+                    {item.value}
+                  </p>
                 </div>
               ))}
             </div>

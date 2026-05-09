@@ -93,6 +93,7 @@ export const MODULES: Module[] = [
     description: 'Gestión comunitaria zonal',
     path:        '/encuentros-zonales',
     icon:        '🏘️',
+    image:       '/icons/Logo-EncuentroZonal.png',
     color:       '#1a070f',
     accentColor: '#CC3D7A',
     category:    'social',
