@@ -33,7 +33,7 @@ export async function saveFile(
       uploadedById:  uploaderId,
     },
     select: {
-      id: true, originalName: true, mimeType: true,
+      id: true, originalName: true, storedName: true, mimeType: true,
       size: true, createdAt: true,
       uploadedBy: { select: { name: true, email: true } },
     },
@@ -51,11 +51,11 @@ export async function listFiles(page = 1, limit = 20) {
       skip:    (page - 1) * limit,
       take:    limit,
       orderBy: { createdAt: 'desc' },
-      select: {
-        id: true, originalName: true, mimeType: true,
-        size: true, createdAt: true,
-        uploadedBy: { select: { name: true, email: true } },
-      },
+    select: {
+      id: true, originalName: true, storedName: true, mimeType: true,
+      size: true, createdAt: true,
+      uploadedBy: { select: { name: true, email: true } },
+    },
     }),
     prisma.file.count(),
   ])

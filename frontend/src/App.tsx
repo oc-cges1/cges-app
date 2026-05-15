@@ -14,6 +14,7 @@ import IntroPage             from '@/pages/IntroPage'
 import DocumentsPage         from '@/features/documents/pages/DocumentsPage'
 import SdsPage               from '@/pages/SdsPage'
 import SdsDocumentosPage     from '@/pages/SdsDocumentosPage'
+import NewsPage              from '@/pages/NewsPage'
 
 // Auth pages — no lazy (son livianas)
 import LoginPage          from '@/features/auth/pages/LoginPage'
@@ -59,6 +60,7 @@ export default function App() {
       <Route path="/auth/reset-password"  element={<ResetPasswordPage />} />
       <Route path="/intro" element={<IntroPage />} />
       <Route path="/documentos" element={<DocumentsPage />} />
+      <Route path="/noticias" element={<NewsPage />} />
 
       {/* ── Rutas protegidas ── con Header/Footer ───────────── */}
       <Route path="/*" element={
@@ -97,7 +99,7 @@ export default function App() {
                 element={<ModulePlaceholder moduleId="mediadores" />} />
               <Route path="/encuentros-zonales"
                 element={<ModulePlaceholder moduleId="encuentros-zonales" />} />
-
+              
               {/* Análisis */}
               <Route path="/resultados-operativos"
                 element={<ModulePlaceholder moduleId="resultados-operativos" />} />

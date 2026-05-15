@@ -18,54 +18,54 @@ services:
       timeout: 5s
       retries: 5
 
+  migrate:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: builder
+    container_name: sisdep_migrate
+    depends_on:
+      postgres:
+        condition: service_healthy
+    env_file: ./backend/.env
+    environment:
+      DATABASE_URL: "postgresql://sisdep_user:sisdep_pass@postgres:5432/sisdep_db?schema=public"
+    command: npx prisma migrate deploy
+    restart: "no"
+
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
       target: production
-
     container_name: sisdep_backend
     restart: unless-stopped
-
     depends_on:
       postgres:
         condition: service_healthy
-
+      migrate:
+        condition: service_completed_successfully
     env_file: ./backend/.env
-
     environment:
       DATABASE_URL: "postgresql://sisdep_user:sisdep_pass@postgres:5432/sisdep_db?schema=public"
       NODE_ENV: production
-
     ports:
       - "4000:4000"
-
     volumes:
-      - ./backend/uploads:/app/uploads
+      - uploads_data:/app/uploads
 
   frontend:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-      target: builder
-
+      target: production
     container_name: sisdep_frontend
     restart: unless-stopped
-
     depends_on:
       - backend
-
-    environment:
-      VITE_API_URL: "http://localhost:4000"
-
     ports:
-      - "5173:5173"
-
-    volumes:
-      - ./frontend/src:/app/src
-
-    command: npm run dev -- --host 0.0.0.0
+      - "80:80"
 
 volumes:
   postgres_data:
-  
+  uploads_data:

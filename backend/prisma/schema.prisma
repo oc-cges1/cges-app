@@ -61,3 +61,25 @@ enum Role {
   ADMIN
   OPERATOR
 }
+model NewsArticle {
+  id          String   @id @default(uuid())
+  title       String
+  summary     String?  @db.Text
+  content     String?  @db.Text
+  url         String   @unique
+  imageUrl    String?
+  source      String
+  sourceUrl   String?
+  category    String   @default("General")
+  publishedAt DateTime
+  isUrgent    Boolean  @default(false)
+  isFeatured  Boolean  @default(false)
+  fetchedAt   DateTime @default(now())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([category])
+  @@index([publishedAt])
+  @@index([source])
+  @@map("news_articles")
+}

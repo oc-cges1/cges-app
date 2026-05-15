@@ -151,6 +151,16 @@ export const MODULES: Module[] = [
   accentColor: '#7B3FCC',
   category:    'analisis',
 },
+{
+  id:          'noticias',
+  name:        'Centro de Noticias',
+  description: 'Monitoreo de orden público y seguridad',
+  path:        '/noticias',
+  icon:        '📡',
+  color:       '#1a0707',
+  accentColor: '#CC2B2B',
+  category:    'seguridad',
+},
 ]
 
 export const CATEGORY_LABELS: Record<Module['category'], string> = {

@@ -14,6 +14,8 @@ import { errorHandler }    from './middlewares/error.middleware'
 import filesRoutes         from './routes/files.routes'
 import aiRoutes            from './routes/ai.routes'
 import { authMiddleware }  from './middlewares/auth.middleware'
+import newsRoutes          from './routes/news.routes'
+
 
 const app = express()
 
@@ -21,8 +23,23 @@ const app = express()
 app.use(helmet())
 
 // ── CORS ──────────────────────────────────────────────────────
+const ALLOWED_ORIGINS = [
+  env.FRONTEND_URL,
+  'http://localhost',
+  'http://localhost:80',
+  'http://localhost:5173',
+  'http://127.0.0.1',
+  'http://127.0.0.1:80',
+  'http://127.0.0.1:5173',
+].filter(Boolean)
+
 app.use(cors({
-  origin:         env.FRONTEND_URL,
+  origin: (origin, callback) => {
+    // Permitir peticiones sin origin (Postman, curl, mismo servidor)
+    if (!origin) return callback(null, true)
+    if (ALLOWED_ORIGINS.includes(origin)) return callback(null, true)
+    callback(new Error(`CORS bloqueado para: ${origin}`))
+  },
   credentials:    true,
   methods:        ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
@@ -45,6 +62,7 @@ app.get('/health', (_req, res) => {
 app.use('/auth', authRoutes)
 app.use('/files', filesRoutes)
 app.use('/ai',    aiRoutes)
+app.use('/news',  newsRoutes)
 app.use('/uploads', authMiddleware as express.RequestHandler, express.static(path.resolve(process.cwd(), env.UPLOAD_DIR ?? 'uploads')))
 // ── 404 ───────────────────────────────────────────────────────
 app.use((_req, res) => {
